@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Price Range Prediction</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" type="text/css" href='/static/style.css'>
+</head>
+<body>
+    <div class="container">
+        <div></div>
+        <div class="main">
+            <form action=" http://127.0.0.1:5000/prediction" method='POST'>
+                <div class="heading">📱Mobile Price Range Prediction📱</div>
+            
+                    <div class ="main2">
+                        <div class="grid-item1" >
+                            
+                                <div class="input-box">
+                                <h3><b>Brand : </b></h3>
+                                    <input  type="text" name="brand" id="brand" placeholder="Enter the Mobile Brand"  class="input" autocomplete="off" required>
+                                </div>
+                                <div class="input-box">
+                                    <h3><b>Model: </b></h3>
+                                    <input  type="text" name="model" id="model" placeholder="Enter the Model name"  class="input" autocomplete="off" required>
+                                </div>
+                                <div class="input-box">
+                                    <h3><b>Battery Power: </b></h3>
+                                    <input  type="text" name="battery_power" id="battery_power" placeholder="Enter the Battery Life  (i.e:800,1500)" autocomplete="off" class="input" required>
+                                </div>
+                                <div class="input-box">
+                                    <h3><b>Memory Space : </b></h3>
+                                    <input  type="text" name="memory_space" id="memory_space" placeholder="Enter the Memory space  in (gb)" class="input" autocomplete="off" required>
+                                </div>
+                        </div>
+                        <div class="grid-item2" >
+                            <div class="input-box">
+                                <h3><b>Ram : </b></h3>
+                                <input  type="text" name="ram" id="ram" placeholder="Enter the Ram in (mb)" class="input" autocomplete="off" required>
+                            </div>
+                            <div class="input-box">
+                                <h3><b>Pixels Height : </b></h3>
+                                <input  type="text" name="px_height" id="px_height" placeholder="Enter the Pixel height(i.e: 984,1210)" class="input" autocomplete="off" required>
+                            </div>
+                            <div class="input-box">
+                                <h3><b>Pixel Width: </b></h3>
+                                <input  type="text" name="px_width" id="px_width" placeholder="Enter the Pixel Width(i.e : 1210,1000)" class="input" autocomplete="off" required>
+                            </div>
+                            <div class="input-box">
+                                <h3><b> <label for="cars">Condition of  Phone :</label></b></h3>
+                                    <select name="good_bad"  id="good_bad" class="input"required>
+                                      <option value="good">Good</option>
+                                      <option value="bad">Bad</option>
+                                    </select>
+                            </div>
+                            
+                            
+                        </div>
+                    </div>
+            
+                <div  class="footer">
+                    <div class="button">
+                        <input type="submit" class="inside" value="Predict" >
+                    </div>
+                    <div class="output">
+                        <div class="foot">
+                            <b>Price range:{{output}}</b>
+                        </div>
+                    </div>
+                   
+                </div>
+            </form>
+            <div class="bottom" >
+
+            </div>
+            
+        </div>
+        
+    </div>
+
+</body>
+</html>
