@@ -66,3 +66,8 @@ I created this Project in my 6 weeks training during 3rd year of B.tech.
 <hr>
 * The Project was Deployed at Heroku Platform :<br>
   Deployed at : https://mobile-price-range--prediction.herokuapp.com
+  
+ * Looks Like this :
+ 
+ ![image](https://user-images.githubusercontent.com/64760966/132096918-d8205bf3-4d7f-4686-9e66-1824cfbeb234.png)
+
