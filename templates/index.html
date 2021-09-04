@@ -4,81 +4,82 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Price Range Predictor</title>
+    <title>Mobile Price Range Prediction</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" type="text/css" href='/static/style.css'>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@100;400&display=swap" rel="stylesheet">
+ 
 <body>
-    <div class="container">
-        <div></div>
-        <div class="main">
-            <form action="https://mobile-price-range--prediction.herokuapp.com/prediction" method='POST'>
-                <div class="heading">📱Mobile Price Range Predictor📱</div>
-            
-                    <div class ="main2">
-                        <div class="grid-item1" >
-                            
-                                <div class="input-box">
-                                <h3><b>Brand : </b></h3>
-                                    <input  type="text" name="brand" id="brand" placeholder="Enter the Mobile Brand"  class="input" autocomplete="off" required>
-                                </div>
-                                <div class="input-box">
-                                    <h3><b>Model: </b></h3>
-                                    <input  type="text" name="model" id="model" placeholder="Enter the Model name"  class="input" autocomplete="off" required>
-                                </div>
-                                <div class="input-box">
-                                    <h3><b>Battery Power: </b></h3>
-                                    <input  type="text" name="battery_power" id="battery_power" placeholder="Enter the Battery Life  (i.e:800,1500)" autocomplete="off" class="input" required>
-                                </div>
-                                <div class="input-box">
-                                    <h3><b>Memory Space : </b></h3>
-                                    <input  type="text" name="memory_space" id="memory_space" placeholder="Enter the Memory space  in (gb)" class="input" autocomplete="off" required>
-                                </div>
-                        </div>
-                        <div class="grid-item2" >
-                            <div class="input-box">
-                                <h3><b>Ram : </b></h3>
-                                <input  type="text" name="ram" id="ram" placeholder="Enter the Ram in (mb)" class="input" autocomplete="off" required>
-                            </div>
-                            <div class="input-box">
-                                <h3><b>Pixels Height : </b></h3>
-                                <input  type="text" name="px_height" id="px_height" placeholder="Enter the Pixel height(i.e: 984,1210)" class="input" autocomplete="off" required>
-                            </div>
-                            <div class="input-box">
-                                <h3><b>Pixel Width: </b></h3>
-                                <input  type="text" name="px_width" id="px_width" placeholder="Enter the Pixel Width(i.e : 1210,1000)" class="input" autocomplete="off" required>
-                            </div>
-                            <div class="input-box">
-                                <h3><b> <label for="cars">Condition of  Phone :</label></b></h3>
-                                    <select name="good_bad"  id="good_bad" class="input"required>
-                                      <option value="good">Good</option>
-                                      <option value="bad">Bad</option>
-                                    </select>
-                            </div>
-                            
-                            
-                        </div>
-                    </div>
-            
-                <div  class="footer">
-                    <div class="button">
-                        <input type="submit" class="inside" value="Predict" >
-                    </div>
-                    <div class="output">
-                        <div class="foot">
-                            <b>Price range:{{output}}</b>
-                        </div>
-                    </div>
-                   
-                </div>
-            </form>
-            <div class="bottom" >
+  <div class="wrapper">
 
+    <div class="container">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>  
+        <div class="item"></div>
+
+        <div class="item" id="main">
+            <div id="header">Mobile Range Predictor</div>
+            <div id="image"> <img src="../images//pic.webp"alt="image"> </div>
+
+            <div id="inpt1">
+                <form action="https://mobile-price-range--prediction.herokuapp.com/prediction" method='POST'>
+                            <div class="input-box">
+                                <p>Brand : </p>
+                                <input  type="text" name="brand" id="brand" placeholder="Enter the Mobile Brand"  class="input-form" autocomplete="off" required>
+                            </div>
+                            <div class="input-box">
+                                <p>Model: </p>
+                                <input  type="text" name="model" id="model" placeholder="Enter the Model name"  class="input-form" autocomplete="off" required>
+                            </div>
+                            <div class="input-box">
+                                <p>Battery Power:</p>
+                                <input  type="text" name="battery_power" id="battery_power" placeholder="Battery Life  (i.e:800,1500)" autocomplete="off" class="input-form" required>
+                            </div>
+                            <div class="input-box">
+                                <p>Memory Space :</p>
+                                <input  type="text" name="memory_space" id="memory_space" placeholder="Memory space  in (gb)" class="input-form" autocomplete="off" required>
+                            </div>
             </div>
+
+            <div id="inpt2">
+                <div class="input-box">
+                    <p>Ram : </p>
+                    <input  type="text" name="ram" id="ram" placeholder="Ram in (mb)" class="input-form" autocomplete="off" required>
+                </div>
+                <div class="input-box">
+                    <p>Pixels Height :</p>
+                    <input  type="text" name="px_height" id="px_height" placeholder="Pixel height(i.e: 984,1210)" class="input-form" autocomplete="off" required>
+                </div>
+                <div class="input-box">
+                    <p>Pixel Width: </p>
+                    <input  type="text" name="px_width" id="px_width" placeholder="Pixel Width(i.e : 1210,1000)" class="input-form" autocomplete="off" required>
+                </div>
+                <div class="good_bad">
+                    <p> <label for="cars">Phone's Condition:</label></p>
+                        <select name="good_bad"  id="good_bad" class="input-form" required>
+                          <option value="good">Good</option>
+                          <option value="bad">Bad</option>
+                        </select>
+                </div>
+            </div>
+            <div id="footer">
+                    <button type="submit">Predict </button>
+                            <b>Price range:{{output}}</b>
+
+        </div>
+            </div>   
+            
             
         </div>
-        
-    </div>
 
+        <div class="item"></div>  
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>  
+      </div>
+  </div>
 </body>
 </html>
