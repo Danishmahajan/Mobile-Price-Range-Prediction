@@ -36,12 +36,13 @@ I created this Project in my 6 weeks training during 3rd year of B.tech.
 * Also it will be usefull for Consumers to verify that they are paying best price for a mobile.
 <hr>
 
-### Applied Models:
+### Applied ML Algorithms :
 * Linear Regression
 * KNN
 * Logistic Regression
 * Decision tree
 * Random forest
+
 <hr>
 
 ### The Following Keysteps that are performed in my created model: 
@@ -53,7 +54,7 @@ I created this Project in my 6 weeks training during 3rd year of B.tech.
 > Created a Pickle file.<br>
 <hr>
 
-* The Final model takes the following inputs:
+### The Final model takes the following inputs:
 
 > Brand<br>
 > Model<br>
@@ -64,6 +65,7 @@ I created this Project in my 6 weeks training during 3rd year of B.tech.
 > Pixel-width<br>
 > Condition Of Phone
 <hr>
+
 * The Project was Deployed at Heroku Platform :<br>
   Deployed at : https://mobile-price-range--prediction.herokuapp.com
   
